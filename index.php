@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img src="" alt="">
+        <img src="" alt="Kanban">
         <nav>
             <p>Todos os quadros</p>
 

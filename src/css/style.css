@@ -16,7 +16,7 @@ header{
     width: 20vw;
     padding-top: 2vw;
     gap: 2vw;
-    background-color: #282835ee;
+    background-color: var(--secundary-color);
     border-right: 1px solid #ffffff;
 }
 
@@ -40,7 +40,7 @@ header > nav > ul{
 }
 
 header > nav > ul > li#select{
-    background-color: #4200ea;
+    background-color: var(--button-color);
 }
 
 header > nav > ul > li{
@@ -57,7 +57,7 @@ header > nav > ul > li{
 }
 
 header > nav > ul > li:hover{
-    background-color: #3f00dd99;
+    background-color: var(--button-color-hover);
 }
 
 main{
@@ -67,7 +67,7 @@ main{
 }
 
 main > .tasks-columns{
-    background-color: #282835;
+    background-color: var(--primary-color);
     display: flex;
     gap: 2vw;
     /* padding-left: 2vw; */
@@ -88,13 +88,13 @@ main > .header-task{
     height: 15vh;
     padding: 0 1vw;
     border-bottom: 1px solid #ffffff;
-    background-color: #282835ee;
+    background-color: var(--secundary-color);
 }
 
 main > .header-task > button{
     width: 10vw;
     height: 3vw;
-    background-color: #4200ea;
+    background-color: var(--button-color);
     font-weight: 700;
     border-radius: 1vw;
     cursor: pointer;

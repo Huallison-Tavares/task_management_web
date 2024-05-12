@@ -1,6 +1,15 @@
+:root{
+    --text-color:#ffffff;
+    --primary-color:#282835;
+    --secundary-color:#282835ee;
+    --button-color:#4200ea;
+    --button-color-hover:#3f00dd99;
+}
+
 *{
     margin: 0;
-    color:#ffffff;
+    color: var(--text-color);
+    box-sizing: border-box;
 }
 
 ul{
@@ -10,4 +19,8 @@ ul{
 
 ul > li{
     padding: 0;
+}
+
+.display-none{
+    display: none;
 }

@@ -1,0 +1,104 @@
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.586);
+}
+
+section > form, section > form > .form-elements{
+    display: flex;
+    flex-direction: column;
+}
+
+section > form{
+    background-color: var(--primary-color);
+    width: 30vw;
+    min-height: 80vh;
+    gap: 2vw;
+    padding: 1vw 2vw 1vw 2vw;
+    overflow-y: scroll;
+    scrollbar-width:none;
+
+}
+
+section > form > .form-elements > .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+section > form > .form-elements > .inputs > .input{
+    display:flex;
+}
+
+section > form > .form-elements > .inputs > .input > button{
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1vw;
+    width: 10%;
+}
+
+section > form > .form-elements > .inputs > .input > input{
+    width: 100%;
+}
+
+section > form > h1{
+    text-align: center;
+}
+
+
+section > form > .form-elements{
+    gap: 0.5vw;
+}
+
+section > form > .form-elements > input,
+section > form > .form-elements > .inputs > .input > input,
+section > form > .form-elements > textarea,
+section > form > .form-elements > select{
+    background-color: var(--primary-color);
+    border: 1px rgba(255, 255, 255, 0.538) solid;
+}
+
+section > form > .form-elements > input,
+section > form > .form-elements > .inputs > .input > input,
+section > form > .form-elements > select{
+    height:2vw;
+}
+
+section > form > .form-elements > textarea{
+    height: 5vw;
+}
+
+section > form > .form-elements > button,
+section > form > input{
+    height: 2.5vw;
+    font-size: 1vw;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 1vw;
+}
+
+section > form > .form-elements > button{
+    background-color:#ffffff;
+    color: var(--button-color);
+}
+
+section > form > .form-elements > button:hover{
+    background-color:#ffffffcc;
+}
+
+section > form > input,
+section > form > .inputs > .input > input{
+    background-color:var(--button-color);
+}
+
+section > form > input:hover{
+    background-color:var(--button-color-hover);
+}

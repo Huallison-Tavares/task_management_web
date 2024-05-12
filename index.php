@@ -6,7 +6,7 @@
     <title>Task Management</title>
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
-    <script src="./src/js/app.js"></script>
+    <link rel="stylesheet" href="./src/css/overlapping-elements.css">
 </head>
 <body>
     <header>
@@ -26,7 +26,7 @@
     <main>
         <div class="header-task">
             <h1>Plataforma Launch</h1>
-            <button>+ Adicionar Nova Tarefa</button>
+            <button type="button" onclick="addTask()">+ Adicionar Nova Tarefa</button>
         </div>
 
         <div class="tasks-columns">
@@ -97,8 +97,49 @@
                 </div>
             </div>
         </div>
-        
-
     </main>
+
+
+    <section class="display-none">
+        <form action="/src/php/send-to-db.php" method="post">
+           <h1>Adicionar Tarefa</h1> 
+            
+            <div class="form-elements">
+                <label for="title">Titulo</label>
+                <input type="text" name="title" id="title" placeholder="e.g. Fazer uma Pausa para o Café">
+            </div>
+
+            <div class="form-elements">
+                <label for="description">Descrição</label>
+                <textarea name="description" id="description" placeholder="e.g. É sempre bom fazer uma pausa. Esta pausa de 15 minutos para recarregar as baterias."></textarea>
+            </div>
+            
+            <div class="form-elements">
+                <label for="subtask">Sub-Tarefas</label>
+                <div class="inputs">
+                    <div class="input">
+                        <input type="text" name="subtask" id="subtask" placeholder="e.g. Fazer café">
+                        <button type="button" onclick="removeSubtask(this)" id="remove-subtask"> X </button>
+                    </div>
+
+                </div>
+
+                <button type="button" onclick="addSubtask()" id="add-subtask">+ Adicionar Nova Sub-Tarefa</button>
+            </div>
+            
+            <div class="form-elements">
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="Pendencias">Pendencias</option>
+                    <option value="Fazendo">Fazendo</option>
+                    <option value="Feito">Feito</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <script src="./src/js/app.js"></script>
 </body>
 </html>
